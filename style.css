@@ -62,7 +62,7 @@ a:hover {
     background-image: url(img/homebackgroundpic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vh;
     height: 800px;
 }
 .text-container{
