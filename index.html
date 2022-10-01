@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meowsite</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 
 <body>
@@ -54,20 +55,25 @@
             <div class="login-form">
                 <label for="">Username</label>
                 <br>
-                <input type="text" placeholder="Username" id="username">
+                <input type="text" placeholder="Username" id="username" onfocus="ClearFields()">
                 <br>
                 <br>
                 <label for="">Password</label>
                 <br>
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" id="password">
                 <br>
                 <br>
                 <label for="">Confirm Password</label>
                 <br>
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" id="confirm_password">
                 <br>
                 <br>
-                <button type="submit" onclick="submit()">Sign Up!</button>
+                <div class="clear-btn">
+                    <button type="submit" onclick="ClearFields()">Clear</button>
+                </div>
+                <div class="submit-btn">
+                    <button type="submit" onclick="submit()">Sign Up!</button>
+                </div>
             </div>
         </div>
     </div>
@@ -85,4 +91,5 @@
     </footer>
 </body>
 <script src="script.js"></script>
+
 </html>
