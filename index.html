@@ -52,29 +52,25 @@
     <div id="Contact">
         <div class="contact-container">
             <h1>Hello There!</h1>
-            <div class="login-form">
-                <label for="">Username</label>
-                <br>
-                <input type="text" placeholder="Username" id="username" onfocus="ClearFields()">
-                <br>
-                <br>
-                <label for="">Password</label>
-                <br>
-                <input type="password" placeholder="Password" id="password">
-                <br>
-                <br>
-                <label for="">Confirm Password</label>
-                <br>
-                <input type="password" placeholder="Password" id="confirm_password">
-                <br>
-                <br>
+            <form id="contact-form">
+                <div class="field">
+                  <label for="email_id">Email</label>
+                  <input type="text" name="email_id" id="email_id" placeholder="Email">
+                </div>
+                <div class="field">
+                  <label for="password_id">Password</label>
+                  <input type="password" name="password_id" id="password_id" placeholder="Password">
+                </div>
+                <div class="field">
+                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                </div>
                 <div class="clear-btn">
-                    <button type="submit" onclick="ClearFields()">Clear</button>
+                    <input type="button" value="Clear" onclick="ClearFields()">
                 </div>
                 <div class="submit-btn">
-                    <button type="submit" onclick="submit()">Sign Up!</button>
+                    <input type="submit" id="button" value="Send" >
                 </div>
-            </div>
+              </form>
         </div>
     </div>
     <div id="About">
@@ -91,5 +87,11 @@
     </footer>
 </body>
 <script src="script.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('576MpCYtWrPyboP6u')
+</script>
 
 </html>
